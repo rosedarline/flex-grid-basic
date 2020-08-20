@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.header {
+  background-color: #1a237e;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+/* Using display block in order to rotate the anchor tags 6deg */
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s ease-out;
+}
+
+/* Add an hover effect and rotate 6deg */
+.nav a:hover {
+  color: #8c9eff;
+  transform: rotate(6deg);
+}
+
+/* To center the content in .hero-inner we used display flex, and justify-conter:center */
+.hero {
+  background-color: #8c9eff;
+  padding: 60px 45px;
+  display: flex;
+  justify-content: center;
+}
+
+/* To change the width of our h1 and the paragraph. With the max-width, no matter the size of the screen it will always be 750px.*/
+.hero-inner {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-weight: normal;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.18rem;
+  line-height: 1.9;
+  margin-bottom: 10px;
+}
+
+/* We use diplay inline-block because we want the anchor/button to respond to the vertical marging of the paragraph, but dont want it to take the full avalaible width. */
+.btn {
+  background-color: #1a237e;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.18rem;
+  display: inline-block;
+}
+
+.features {
+  background-color: #e8eaf6;
+  padding: 60px 45px;
+}
+
+/* By using margin auto it moves everything in that div container to the right */
+/* The grid-template-column will have a minimum width of 300px for smaller screen and one column(by using the auto-fit and minmax object) */
+.features-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.featured-item h3 {
+  color: #283593;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.featured-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #999;
+  font-size: 0.9rem;
+}
